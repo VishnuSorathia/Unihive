@@ -22,3 +22,7 @@ UniHive is a university-centric mobile application built using **React Native Ex
 ```bash
 git clone https://github.com/your-username/unihive.git
 cd unihive
+
+npm install
+
+npm start
