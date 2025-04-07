@@ -1,0 +1,27 @@
+import React, { useRef, useMemo } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import BottomSheet from '@gorhom/bottom-sheet';
+
+const BottomSheetComponent = () => {
+  const bottomSheetRef = useRef(null);
+  const snapPoints = useMemo(() => ['25%', '50%'], []);
+
+  return (
+    <BottomSheet ref={bottomSheetRef} index={-1} snapPoints={snapPoints}>
+      <View style={styles.content}>
+        <Text style={styles.bottomSheetText}>Global Bottom Sheet</Text>
+      </View>
+    </BottomSheet>
+  );
+};
+
+const styles = StyleSheet.create({
+  content: { padding: 20, alignItems: 'center' },
+  bottomSheetText: {
+    fontFamily: 'Roboto', // Apply the custom font here
+    fontSize: 16,
+    color: 'black',
+  },
+});
+
+export default BottomSheetComponent;
